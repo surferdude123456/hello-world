@@ -2,23 +2,31 @@
 <html>
 <head>
 	<script src="http://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$('document').ready(function(){
+			$('.snake').on('click', function () {
+				$(this).addClass('active');
+			});
+		});
+	</script>
 	<style type="text/css">
 		.snake {
 			background: green;
 			border-radius: 100%;
 			width: 25px;
 			height: 25px;
-			margin-left: 100px;
-			float: left;
-		}
-		.red {
-			background: red;
-		}
+			transition: all 5s;
+        }
+        .active {
+        	background: red;
+        	margin-left: 200px;
+        	margin-top: 100px; 
+        	opacity: 0;
+        }
 	</style>
 
 </head>
 <body>
-	<div class="red snake" ></div>
 	<div class="snake" ></div>
 </body>
 </html>
